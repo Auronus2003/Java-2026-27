@@ -1,12 +1,11 @@
-package unidad1;
+package minibucles;
 
-public class Ej2 {
+public class Ej3 {
     public static void main(String[] args) {
         int i = 0;
-        while (i <= 100) {
+        do {
             System.out.println(i);
             i += 5;
-        }
-
+        } while (i <= 100);
     }
 }
