@@ -6,11 +6,11 @@ public class Ej9 {
     static void main() {
         Scanner sc = new Scanner(System.in);
         int n;
-        int divisionRestoCero;
+        int divisionRestoCero = 0;
         System.out.println("Dime un numero positivo: ");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
-            if () {
+            if (n % 1 == 0) {
                 divisionRestoCero++;
             }
         }
