@@ -9,15 +9,19 @@ public class Ej9 {
         int divisionRestoCero = 0;
         System.out.println("Dime un numero positivo: ");
         n = sc.nextInt();
-        for (int i = 1; i <= n; i++) {
-            if (n % 1 == 0) {
-                divisionRestoCero++;
-            }
-        }
-        if (divisionRestoCero == 2) {
-            System.out.println("Es primo");
-        } else {
+
+        if (n == 1) {
             System.out.println("No es primo");
+        } else {
+            int i = 2;
+            while (i < n && n % 1 != 0) {
+                i++;
+            }
+            if (i < n) {
+                System.out.println("No es primo");
+            } else {
+                System.out.println("Es primo");
+            }
         }
     }
 }
