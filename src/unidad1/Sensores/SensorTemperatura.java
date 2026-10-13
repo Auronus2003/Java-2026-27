@@ -59,9 +59,9 @@ public class SensorTemperatura {
             // Mostrar lecturas sensores
             presencia = (sensorP == 1) ? " SI" : "NO";
             System.out.println("Lecturas actuales");
-            System.out.println("\t- Temperatura: " + sensorT + "ºC");
-            System.out.println("\t- Humedad: " + sensorH + "%");
-            System.out.println("\t- Presencia: " + presencia);
+            System.out.println("\t\t- Temperatura: " + sensorT + "ºC");
+            System.out.println("\t\t- Humedad: " + sensorH + "%");
+            System.out.println("\t\t- Presencia: " + presencia);
 
             //Mostrar estadísticas
             System.out.println("Mostrar estadísticas");
