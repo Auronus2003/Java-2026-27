@@ -18,9 +18,12 @@ public class Array11 {
 
         System.out.println("Dame el segundo valor");
         int numeros2 = sc.nextInt();
-        if () {
-            for (int i = 0; i < array.length; i++) {
-                array[numeros1] = numeros2;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == numeros1) {
+                array[i] = numeros2;
+                System.out.print("\" " + array[i] + "\" ");
+            }else {
                 System.out.print(array[i] + " ");
             }
         }
