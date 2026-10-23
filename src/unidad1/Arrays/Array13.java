@@ -1,5 +1,6 @@
 package unidad1.Arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array13 {
@@ -10,14 +11,15 @@ public class Array13 {
         int n;
         System.out.println("Introduce el valor del array 1:");
         n = sc.nextInt();
-        System.out.println("Introduce el valor de v:");
+        System.out.println("Introduce el valor inicial:");
         v = sc.nextInt();
-        System.out.println("Introduce el valor de i:");
+        System.out.println("Introduce el valor de incremento:");
         i = sc.nextInt();
         int[] array1 = new int[n];
-        for (int j = v; j < array1[n]; j += i) {
-            array1[j] = i;
-            System.out.println(array1[j] + " ");
+        for (int j = v; j < array1.length; j++) {
+            array1[j] = v;
+            v += i;
         }
+        System.out.println(Arrays.toString(array1));
     }
 }
