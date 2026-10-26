@@ -1,4 +1,4 @@
-package unidad1.minibucles;
+package unidad1.Minibucles;
 
 import java.util.Scanner;
 

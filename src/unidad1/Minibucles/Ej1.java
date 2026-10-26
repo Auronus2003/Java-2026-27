@@ -1,4 +1,4 @@
-package unidad1.minibucles;
+package unidad1.Minibucles;
 
 public class Ej1 {
     public static void main(String[] args) {

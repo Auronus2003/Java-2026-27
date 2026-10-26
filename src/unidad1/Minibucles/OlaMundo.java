@@ -1,4 +1,4 @@
-package unidad1.minibucles;
+package unidad1.Minibucles;
 
 public class OlaMundo {
     static void main() {
