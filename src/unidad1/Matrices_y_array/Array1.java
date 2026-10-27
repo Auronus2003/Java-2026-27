@@ -14,16 +14,18 @@ public class Array1 {
         matriz[2][2] = -2;
         matriz[2][3] = 9;
         matriz[2][5] = 11;
+        System.out.print("\t");
 
         for (int i = 0; i < matriz[0].length; i++) {
-            System.out.println("Columna " + i);
+            System.out.print("\tColumna " + i + "\t|");
         }
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 6; j++) {
-                System.out.println(matriz[i][j]);
-
+        System.out.println();
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("Fila " + i + "\t|\t");
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + "\t\t|\t\t");
             }
+            System.out.println();
         }
     }
 }
