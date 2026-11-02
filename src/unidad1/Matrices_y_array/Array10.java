@@ -39,7 +39,7 @@ public class Array10 {
                 System.out.println("\nLo siento, no admitimos grupos de " + personas + ", haga grupos de 4 personas como máximo e intente de nuevo");
             } else if (personas >= 1) {
                 // Buscar sitio
-                for (int i = 0; i < ; i++) {
+                for (int i = 0; i < personas; i++) {
 
                 }
             }
