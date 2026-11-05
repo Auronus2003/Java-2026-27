@@ -7,9 +7,8 @@ public class Ej7 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Dime una cadena de caracteres");
-        String frase = sc.nextLine().toUpperCase();
-        String palabras;
-        int contador = 0;
-        frase.split(" ");
+        String frase = sc.nextLine().trim();
+        String[] palabras = frase.split(" ");
+        System.out.println("Numero de palabras: " + palabras.length);
     }
 }
