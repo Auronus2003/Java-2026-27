@@ -109,7 +109,4 @@ public class PruebaMetodos {
         return  x != y && x != z && y != z;
     }
 
-    public static int buscarMayor(int[] array){
-
-    }
 }
