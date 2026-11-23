@@ -1,5 +1,3 @@
-package unidad1.Notas;
-
 public class GestionNotas {
 
     public static void main(String[] args) {
@@ -26,12 +24,14 @@ public class GestionNotas {
         // mostrarSuspensos(nombres, notas);
 
         // Mejora 1-3
-        // Llamada para mostrar todos
+        System.out.println("=== LISTADO DE ALUMNOS ===");
+        // mostrarAlumnos(...);
 
-        // Llamada para mostrar aprobados
+        System.out.println("\n=== ALUMNOS APROBADOS ===");
+// mostrarAlumnos(...);
 
-        // Llamada para mostrar suspensos
-
+        System.out.println("\n=== ALUMNOS SUSPENSOS ===");
+// mostrarAlumnos(...);
 
         // 4. Calcular la nota media
         System.out.println("\n=== NOTA MEDIA ===");
@@ -94,7 +94,7 @@ public class GestionNotas {
 
         // 14. Obtener la nota de una posición
         System.out.println("\n=== CONSULTAR NOTA POR POSICIÓN ===");
-        System.out.println(obtenerNota(notas, 3));
+        // System.out.println(obtenerNota(notas, 3));
 
     }
 
