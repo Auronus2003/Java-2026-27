@@ -53,42 +53,43 @@ public class GestionNotas {
 
         // 8. Buscar un alumno
         System.out.println("\n=== BUSCAR ALUMNO ===");
-        int posicion = buscarAlumno(nombres, "Carlos");
+        int posicion = buscarAlumno(nombres, "David");
         if (posicion != -1) {
-            System.out.println("Carlos está en la posición " + posicion);
+            System.out.println(nombres[posicion] + " está en la posición " + posicion);
         } else {
             System.out.println("Alumno no encontrado");
         }
 
         // 9. Consultar la nota de un alumno
         System.out.println("\n=== CONSULTAR NOTA ===");
-        /* double nota = consultarNota(nombres, notas, "Lucia");
+        double nota = consultarNota(nombres, notas, "Lucia");
 
         if (nota != -1) {
             System.out.println("Nota de Lucia: " + nota);
         } else {
             System.out.println("Alumno no encontrado");
-        } */
+        }
 
         // 10. Modificar la nota de un alumno
         System.out.println("\n=== MODIFICAR NOTA ===");
-        /* boolean modificada = modificarNota(
+        boolean modificada = modificarNota(
                 nombres, notas, "Carlos", 6.5);
 
         if (modificada) {
             System.out.println("Nota modificada correctamente");
         } else {
             System.out.println("No se ha podido modificar la nota");
-        } */
+        }
 
         // 11. Incrementar todas las notas
         System.out.println("\n=== LISTADO DESPUÉS DEL INCREMENTO ===");
-        // incrementarNotas(notas, 0.5);
-        // mostrarAlumnos(nombres, notas);
+        int cambios = incrementarNotas(notas, 0.5);
+        mostrarAlumnos(nombres, notas);
+        System.out.println("Se han cambiado: " + cambios + " notas");
 
         // 12. Calcular el porcentaje de aprobados
         System.out.println("\n=== PORCENTAJE DE APROBADOS ===");
-        // System.out.println(porcentajeAprobados(notas) + "%");
+        System.out.println(porcentajeAprobados(notas) + "%");
 
         // 13. Contar las notas superiores a 7
         System.out.println("\n=== NOTAS SUPERIORES A 7 ===");
@@ -170,7 +171,50 @@ public class GestionNotas {
         return i >= notas.length;
     }
 
-    static int buscarAlumno(String[] nombres, String carlos) {
+    static int buscarAlumno(String[] nombres, String alumno) {
+        for (int i = 0; i < nombres.length; i++) {
+            if (nombres[i].equals(alumno)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    static double consultarNota(String[] nombres, double[] notas, String alumno) {
+        int pos = buscarAlumno(nombres, alumno);
+        if (pos != -1) {
+            return notas[pos];
+        }
+        return -1;
+    }
+
+    static boolean modificarNota(String[] nombres, double[] notas, String alumno, double nota) {
+        if (nota >= 0 && nota <= 10) {
+            int pos = buscarAlumno(nombres, alumno);
+            if (pos != -1) {
+                notas[pos] = nota;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static int incrementarNotas(double[] notas, double incremento) {
+        int contador = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            notas[i] += incremento;
+            if (notas[i] < 10) {
+                notas[i] = 10;
+            }
+            contador++;
+        }
+        return contador;
+    }
+
+    static double porcentajeAprobados(double[] notas) {
+        int contador = 0;
+        for (int i = 0; i < notas.length; i++) {}
         return 0;
     }
 }
