@@ -2,7 +2,7 @@ package unidad1.Notas;
 
 public class GestionNotas {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         String[] nombres = {
                 "Ana", "Carlos", "Lucia", "Pedro",
@@ -93,12 +93,16 @@ public class GestionNotas {
 
         // 13. Contar las notas superiores a 7
         System.out.println("\n=== NOTAS SUPERIORES A 7 ===");
-        // System.out.println(contarSuperiores(notas, 7));
+        System.out.println(contarSuperiores(notas, 7));
 
         // 14. Obtener la nota de una posición
         System.out.println("\n=== CONSULTAR NOTA POR POSICIÓN ===");
-        // System.out.println(obtenerNota(notas, 3));
-
+        nota = obtenerMaxima(notas);
+        if (nota == -1) {
+            System.out.println("Posición no válida");
+        } else {
+            System.out.println(nota);
+        }
     }
 
     // IMPLEMENTA AQUÍ LOS MÉTODOS NECESARIOS
@@ -213,8 +217,26 @@ public class GestionNotas {
     }
 
     static double porcentajeAprobados(double[] notas) {
+        if (notas.length == 0) {
+            return 0;
+        }
+        return ((double) contarAprobados(notas) / notas.length) * 100;
+    }
+
+    private static int contarSuperiores(double[] notas, int notaMinina) {
         int contador = 0;
-        for (int i = 0; i < notas.length; i++) {}
+        for (double n : notas) {
+            if (n > notaMinina) {
+                contador++;
+            }
+        }
         return 0;
+    }
+
+    private static double obtenerNota(double[] notas, int posicion) {
+        if (posicion < 0 || posicion >= notas.length) {
+            return -1;
+        }
+        return notas[posicion];
     }
 }
